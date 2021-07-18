@@ -1,0 +1,137 @@
+:root{
+    --vermelho: #E50914;
+    --preto: #030303;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elementos base */
+body {
+    background: var(--preto);
+    font-family: 'Times New Roman', times, serif;
+    color: white;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{
+    margin-left: 10px;
+}
+
+/* Parte da navegação do topo */
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 20px;
+    
+}
+
+/*Efeito do mouse em cima das opções */
+header nav a:hover{
+    color: var(--vermelho);
+}
+
+/*Filme principal*/
+
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url(/img/sniper.jpg);
+
+    height: 500px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .titulo {
+    margin-top: 15%;
+    margin-bottom: 5px;
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
+/* estrelas de classificação */
+.estrelas input[type=radio] {
+    display: none;
+  }
+  .estrelas label i.fa{
+    font-size: 1.0em;
+    margin-bottom: 10px;
+  }
+  .estrelas label i.fa:before {
+    content:'\f005';
+    color: var(--vermelho);
+  }
+  .estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #fff;
+  }
+
+.filme-principal .descricao{
+    margin-bottom: 50px;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: #AAA;
+    
+    padding: 15px 30px;
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer; 
+    transition: .3s ease all;
+}
+
+.botao:hover{
+background-color: #fff;
+color: black
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 60%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    border: 5px solid rgba(0, 0, 0, 0.116);
+}
+
+.box-filme:hover{
+    background-color: #fff;
+    transition: .3s ease all;
+}
+
+.carousel-filmes{
+    margin-top: 10px;
+}
+
+.carousel-descricao{
+    margin-top: 20px;
+    margin-left: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
